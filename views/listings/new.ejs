@@ -1,0 +1,47 @@
+<% layout('/layout/bolilerplate') %>
+<body>
+    <div class="row mt-3">
+        <div class="col-8 offset-2">
+            <br><br>
+        <h3>Create a new Listing</h3>
+       <form method="POST" action="/listings" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="mb-3">
+            <lable for="title" class="form-label">Title</lable>
+            <input type="text" name="listing[title]" placeholder="Add a Catchy Title" class="form-control" required>
+            <div class="valid-feedback">Title Looks Good!</div>
+        </div>
+        <div class="mb-3">
+            <lable for="description" class="form-label">Description</lable>
+            <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea>
+            <div class="invalid-feedback">Please enter a short Descriptions</div>
+        </div>
+        <div class="mb-3">
+            <lable for="image" class="form-label">Upload Listing Image</lable>
+            <input type="file" name="listing[image]" placeholder="Enter Image URL/Link" class="form-control" required>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <lable for="price" class="form-label">Price</lable>
+                <input type="text" name="listing[price]" placeholder="1200" class="form-control" required>
+                <div class="invalid-feedback">Please enter a valid Price</div>
+            </div>
+            <div class="mb-3 col-md-8">
+                <lable for="country" class="form-label">Country</lable>
+                <input type="text" name="listing[country]" placeholder="India" class="form-control" required>
+                <div class="invalid-feedback">Please enter the country name</div>
+            </div>
+        </div>
+        
+        <div class="mb-3">
+            <lable for="locations" class="form-label">Locations</lable>
+            <input type="text" name="listing[location]" placeholder="Jaipur, Rajashthan" class="form-control" required>
+            <div class="invalid-feedback">Please enter the Location</div>
+        </div>
+        <br><br>
+        <button class="btn btn-dark add-btn">Add</button>
+        <br><br>
+        </form>
+    </div>
+    </div>
+    
+</body>
