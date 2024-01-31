@@ -40,7 +40,7 @@ main()
 })
 
 async function main(){
-    await mongoose.connect(MONGO_URL);
+    await mongoose.connect(dbUrl);
 }
 
 const store=MongoStore.create({
